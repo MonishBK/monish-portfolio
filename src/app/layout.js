@@ -1,4 +1,4 @@
-'use client'
+
 
 import './globals.css'
 import './CSS/global.css'
