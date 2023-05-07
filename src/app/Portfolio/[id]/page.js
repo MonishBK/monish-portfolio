@@ -14,25 +14,26 @@ const Works =  ({params}) => {
   const _id = params.id;
   const [data, setData] = useState({});
 
-  const HandelData = async () => {
-
-    const res = await fetch(`/api/getprojects/${_id}`,{
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/json',
-          'User-Agent': '*'
-        }
-      });
-  
-      const data = await res.json();
-  
-      setData(data.data)
-      
-  }
-
 
   useEffect(() => { 
+
+    const HandelData = async () => {
+
+      const res = await fetch(`/api/getprojects/${_id}`,{
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+            'User-Agent': '*'
+          }
+        });
+    
+        const data = await res.json();
+    
+        setData(data.data)
+        
+    }
+
     HandelData()
     // console.log(data.github_link)
     if(window !== "undefined"){

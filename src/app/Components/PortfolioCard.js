@@ -4,6 +4,7 @@ import { useState,useEffect } from 'react';
 import Link from 'next/link'
 import styles from "../CSS/Portfolio.module.css"
 import { BsArrowRightShort } from "react-icons/bs";
+import Image from 'next/image';
 
 const PortfolioCard = ({data}) => {
 
@@ -23,7 +24,13 @@ const PortfolioCard = ({data}) => {
           <div className={`${styles.container}`}>
               <div className={`${styles.card}`}>
                   <div className={`${styles.img}`}>
-                    <img src="/images/project.png"/>
+                    {/* <img src="/images/project.png"/> */}
+                    <Image
+                      src="/images/project.png"
+                      width={350}
+                      height={200}
+                      alt="Picture of the author"
+                    />
                   </div>
                   <div className={`${styles.top_text}`}>
                     <div className={`${styles.name}`}>

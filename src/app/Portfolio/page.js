@@ -25,7 +25,6 @@ const Portfolio =  () => {
     
           const data = await res.json();
           setData(data.data)
-        console.log(data.data);
     }
 
     // HandelGET()
@@ -34,23 +33,27 @@ const Portfolio =  () => {
       if(window !== "undefined"){
         setShowComponent(true);
       }
-        HandelGET()
-        if(window.screen.width > 450){
-          let item = document.getElementById("horizontal_scroll");
-          if(item){
-            item.addEventListener("wheel",(e)=> {
-              e.preventDefault()
-              if (e.deltaY > 0) {
-                item.scrollLeft += 400;
-              }
-              else { 
-                item.scrollLeft -= 400
-              }
-              
-            });
-          }
-        }
+      HandelGET()
+        
     }, []);
+
+    useEffect(() =>{
+      if(window.screen.width > 450){
+        let item = document.getElementById("horizontal_scroll");
+        if(item){
+          item.addEventListener("wheel",(e)=> {
+            e.preventDefault()
+            if (e.deltaY > 0) {
+              item.scrollLeft += 400;
+            }
+            else { 
+              item.scrollLeft -= 400
+            }
+            
+          });
+        }
+      }
+    })
 
     const [showComponent, setShowComponent] = useState(false);
 

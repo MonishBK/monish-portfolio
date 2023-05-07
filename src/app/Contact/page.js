@@ -236,7 +236,7 @@ const Contact = () => {
             <div className={` row ${styles.contact_main_con} py-5`}>
 
                 <div className={`col-lg-4 col-sm-12  ${styles.inner_main_con}  `}>
-                   <h3 className='text-uppercase pb-2 fw-bold'>don't be shy!</h3>
+                   <h3 className='text-uppercase pb-2 fw-bold'>don&apos;t be shy!</h3>
                    <p className='mb-4' style={{
                     fontSize:15
                    }}>
