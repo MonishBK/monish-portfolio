@@ -1,13 +1,14 @@
 'use client'
 
 import { useState,useEffect } from 'react';
+import Head from 'next/head';
 import useDownloader from 'react-use-downloader';
 import Navbar from '../Components/Navbar';
 import styles from "../CSS/About.module.css"
 import Headers from '../Components/Headers';
 import Link from 'next/link'
 import { ProgressSkills } from '../Components/ProgressSkills';
-import { FaToolbox,FaGraduationCap,FaDownload } from "react-icons/fa";
+import { FaGraduationCap,FaDownload } from "react-icons/fa";
 
 import EducationExperienceCard from '../Components/EducationExperienceCard';
 
@@ -30,6 +31,9 @@ const Page = () => {
   return (
     showComponent &&
     <>
+    <Head>
+        <title>About</title>
+    </Head>
         <Navbar/>
         <div className={` ${styles.about_container}`}>
             <Headers hb="resume" hf="about me" />
