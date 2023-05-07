@@ -1,0 +1,169 @@
+body{
+    color: #fff;
+    // background-color: aquamarine;
+}
+
+/* Heading Styles */
+.heading_con{
+    // width: 100%;
+    /* height: 100%; */
+    // background-color: yellowgreen;
+    position: relative;
+    padding-top: 2.5rem;
+    color: #fff;
+
+    .heading_behind{
+        font-size: 6.2rem;
+        font-weight: 800;
+        letter-spacing: 10px;
+        text-transform: uppercase;
+        color: rgba(153, 153, 153, 0.1);
+    }
+
+    .heading_front{
+        position: absolute;
+        top: 40%;
+        font-size: 3rem;
+        font-weight: 800;
+        // letter-spacing: 2px;
+        text-transform: uppercase;
+        // display: none;
+
+        span{
+            color: #ffb400;
+        }
+    }
+  
+  }
+
+//   main button 
+.main_btn{
+    // font-size: 1rem;
+    border-radius: 30px;
+    background-color: transparent;
+    width: 210px;
+    height: 48px;
+    border: 1px solid #ffb400;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    position: relative;
+    padding: 0px;
+    overflow: hidden;
+    text-decoration: none;
+
+    &:hover{
+        color: #fff;
+    }
+
+    &::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #ffb400;
+        left: 100%;
+        transition: all .5s;
+       
+    }
+    &:hover::after{
+        left: 0%;
+    }
+    
+
+    .btn_text{
+        width: 75%;
+        font-size: .8rem;
+        // background-color: red;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 500;
+        z-index: 10;
+        color: #fff;
+    }
+
+    .arrow_mark{
+        width: 25%;
+        height: 100%;
+        border-radius: 50%;
+        color: #ffff;
+        background-color: #ffb400;
+        display: grid;
+        place-items: center;
+        font-weight:bold;
+        z-index: 10;
+        // background-color: transparent;
+    }
+}
+
+
+// Loading CSS
+.main_loading{
+    width: 100%;
+    height: 100vh;
+    // background-color: pink;
+    display: grid;
+    place-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    .lds-facebook {
+        display: inline-block;
+        position: relative;
+        width: 80px;
+        height: 80px;
+      }
+      .lds-facebook div {
+        display: inline-block;
+        position: absolute;
+        left: 8px;
+        width: 16px;
+        background: #ffb400;
+        animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+      }
+      .lds-facebook div:nth-child(1) {
+        left: 8px;
+        animation-delay: -0.24s;
+      }
+      .lds-facebook div:nth-child(2) {
+        left: 32px;
+        animation-delay: -0.12s;
+      }
+      .lds-facebook div:nth-child(3) {
+        left: 56px;
+        animation-delay: 0;
+      }
+    }
+
+ 
+@keyframes lds-facebook {
+    0% {
+        top: 8px;
+        height: 64px;
+    }
+    50%, 100% {
+        top: 24px;
+        height: 32px;
+    }
+    }
+
+@media screen and (max-width: 576px){
+
+    .heading_con{
+        padding-top: 0px;
+        margin-bottom: 2rem;
+        background-color: greenyellow;
+
+        .heading_behind{
+            display: none;
+        }
+        .heading_front{
+            // width: 100%;
+            text-align: left;
+            font-size: 1.7rem;
+            background-color: #252525;
+            padding: 1rem  2rem;
+        }
+    }
+
+}

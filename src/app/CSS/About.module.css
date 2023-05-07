@@ -1,0 +1,115 @@
+.about_container {
+  width: 100vw;
+  background-color: #111111;
+}
+
+.about_container .personal_info {
+  width: 100%;
+  padding: 0rem 2rem;
+  background-color: #111111;
+  color: #fff;
+}
+
+.about_container .personal_info .infos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about_container .personal_info .infos .inner_info {
+  color: grey;
+  text-transform: capitalize;
+  display: flex;
+  padding: 5px 0px;
+}
+
+.about_container .personal_info .infos .inner_info span {
+  color: #fff;
+}
+
+.about_container .personal_info .skills_con {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.about_container .personal_info .skills_con .inner_skills {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.about_container .personal_info .skills_con .inner_skills .inner_skills_con {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.about_container .personal_info .edu_exp_con {
+  width: 90%;
+  margin: auto;
+}
+
+.about_container .personal_info .edu_exp_con .edu_exp_inner_box {
+  position: relative;
+  border-left: 1px solid rgba(128, 128, 128, 0.3);
+}
+
+.about_container .personal_info .edu_exp_con .edu_exp_inner_box .edu_logo {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  background-color: #ffb400;
+  top: 0;
+  left: -15px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.about_container .saparator_div {
+  width: 30%;
+  height: 1px;
+  background-color: rgba(128, 128, 128, 0.3);
+  margin: auto;
+}
+
+@media screen and (max-width: 576px) {
+  .about_container .personal_info {
+    padding: 0rem 1rem;
+  }
+  .about_container .personal_info .about_pro_pic {
+    width: 200px;
+    height: 200px;
+    background-color: #000;
+    border-radius: 50%;
+    border: 2px solid #252525;
+    margin: 0rem auto;
+    margin-bottom: 2rem;
+    background-image: url("/images/p3.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .about_container .personal_info .infos {
+    width: 100%;
+  }
+  .about_container .personal_info .infos .l_info {
+    width: 50%;
+  }
+  .about_container .personal_info .infos .r_info {
+    width: 50%;
+  }
+  .about_container .personal_info .infos .inner_info {
+    display: flex;
+    flex-direction: column;
+  }
+}
+/*# sourceMappingURL=About.module.css.map */
