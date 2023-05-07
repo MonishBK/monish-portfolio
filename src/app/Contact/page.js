@@ -277,14 +277,14 @@ const Contact = () => {
                    <div className='d-flex justify-content-between  mb-5 '>
                     <div className={`${styles.inner_left_contact}`}>
 
-                        <Link href={"https://www.facebook.com/profile.php?viewas=100000686899395&id=100008324416789"}  
+                        <Link href={"https://www.facebook.com/profile.php?id=100008324416789"}  
                          target='_blank'
                          >
                             <div className={`${styles.social_icons}`}>
                                 <FaFacebookF />
                             </div>
                         </Link>
-                        <Link href={"https://github.com/MonishBK"} target='_blank'>
+                        <Link href={"https://twitter.com/monish_b_k"} target='_blank'>
                             <div className={`${styles.social_icons}`}>
                                 <BsTwitter />
                             </div>
@@ -293,10 +293,12 @@ const Contact = () => {
                             <div className={`${styles.social_icons}`}>
                                 <BsGithub />
                             </div>
+                        </Link >
+                        <Link href={"https://www.linkedin.com/in/monish-b-k-61726818a/"} target='_blank' >
+                            <div className={`${styles.social_icons}`}>
+                                <BsLinkedin />
+                            </div>
                         </Link>
-                        <div className={`${styles.social_icons}`}>
-                            <BsLinkedin />
-                        </div>
 
                     </div>
                    </div>
