@@ -61,6 +61,7 @@ const Portfolio =  () => {
   return (
     showComponent &&
     <>
+    <title>Portfolio</title>
          <Navbar/>
         <div className={` ${styles.portfolio_container} ${styles.loading_rel} `}>
             <Headers hb="works" hf="my portfolio" />

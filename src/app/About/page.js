@@ -1,7 +1,6 @@
 'use client'
 
 import { useState,useEffect } from 'react';
-import Head from 'next/head';
 import useDownloader from 'react-use-downloader';
 import Navbar from '../Components/Navbar';
 import styles from "../CSS/About.module.css"
@@ -31,9 +30,7 @@ const Page = () => {
   return (
     showComponent &&
     <>
-    <Head>
         <title>About</title>
-    </Head>
         <Navbar/>
         <div className={` ${styles.about_container}`}>
             <Headers hb="resume" hf="about me" />

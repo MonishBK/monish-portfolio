@@ -229,6 +229,9 @@ const Contact = () => {
   return (
     showComponent &&
     <>
+    <title>
+        Contact
+    </title>
         <Navbar/>
         <div className={` ${styles.contact_container} ${styles.loading_rel} `}>
             <Headers hb="Contact" hf="get in touch" />

@@ -46,6 +46,7 @@ const Works =  ({params}) => {
   return (
     showComponent &&
     <>
+    <title>works</title>
         <div className={` ${styles.projects_container}`}>
         {/* <Headers hb="works" hf="my portfolio" /> */}
         
