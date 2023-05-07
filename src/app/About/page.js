@@ -50,7 +50,7 @@ const Page = () => {
                            <p className={`${styles.inner_info}`}> name :   <span>monish b k</span></p>  
                         </div>
                         <div className={`col-sm-6 ${styles.r_info}`}>
-                            <div className={`${styles.inner_info}`}>Address : <span>Bengalore</span></div>
+                            <div className={`${styles.inner_info}`}>Address : <span>Bengaluru, Karnataka</span></div>
                         </div>
                     </div>
                     <div className={`${styles.infos}`}>
