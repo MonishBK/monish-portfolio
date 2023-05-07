@@ -114,7 +114,7 @@ const Page = () => {
                     <div className={`${styles.inner_skills}`} >
                         <div className={`${styles.inner_skills_con}`}>
                             <ProgressSkills percentage="60" lang="Node.JS" />
-                            <ProgressSkills percentage="55" lang="MongoDB" />
+                            <ProgressSkills percentage="60" lang="MongoDB" />
                         </div>
                         <div className={`${styles.inner_skills_con}`}>
                             <ProgressSkills percentage="85" lang="React.JS" />

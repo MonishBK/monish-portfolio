@@ -1,5 +1,3 @@
-
-
 import './globals.css'
 import './CSS/global.css'
 import 'bootstrap/dist/css/bootstrap.css';
