@@ -47,7 +47,7 @@ const Page = () => {
 
                     <div className={`${styles.infos}`}>
                         <div className={`col-sm-6 ${styles.l_info}`}>
-                           <p className={`${styles.inner_info}`}> name :   <span>monish b k</span></p>  
+                           <div className={`${styles.inner_info}`}> name :   <span>monish b k</span></div>  
                         </div>
                         <div className={`col-sm-6 ${styles.r_info}`}>
                             <div className={`${styles.inner_info}`}>Address : <span>Bengaluru, Karnataka</span></div>

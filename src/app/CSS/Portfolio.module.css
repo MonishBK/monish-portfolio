@@ -7,7 +7,7 @@
   width: 100vw;
   display: flex;
   align-items: center;
-  height: 70vh;
+  height: 75vh;
   overflow-y: hidden;
   scroll-behavior: smooth;
 }
@@ -144,13 +144,13 @@
 }
 
 .projects_container .project_description h4 {
-  font-size: 25px;
+  font-size: 1.2rem;
   color: grey;
   text-transform: capitalize;
 }
 
 .projects_container .project_description h4 span {
-  font-size: 25px;
+  font-size: 1.2rem;
   color: #fff;
   text-transform: uppercase;
 }
@@ -183,6 +183,14 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .projects_container .video_responsive {
+    width: 90vw;
+    height: 40vh;
+    margin-top: 2rem;
+  }
+}
+
 @media screen and (max-width: 450px) {
   .portfolio_container .portfolio_works {
     display: flex;
@@ -195,7 +203,23 @@
     margin-top: 2rem;
   }
   .projects_container .video_responsive {
-    height: 50vh;
+    width: 95vw;
+    height: 30vh;
+    margin-top: 1rem;
+  }
+  .projects_container .project_description {
+    width: 90%;
+  }
+  .projects_container .project_description h4 {
+    font-size: 1rem;
+  }
+  .projects_container .project_description h4 span {
+    font-size: 1rem;
+  }
+  .projects_container .project_description p {
+    font-size: 15px;
+    padding-left: 10px;
+    color: #fff;
   }
 }
 /*# sourceMappingURL=Portfolio.module.css.map */

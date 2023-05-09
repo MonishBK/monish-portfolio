@@ -52,8 +52,13 @@
 
 }
 
-.form_div{
-    padding-right: 2.5rem;
+.main_form{
+
+    padding: 0rem 4rem;
+
+    .form_div{
+        padding-right: 2.5rem;
+    }
 }
 
 .loading_rel{
@@ -75,25 +80,32 @@
 }
 
 @media screen and (max-width:991px) {
-    .form_div{
-        padding-right: 0px;
+    .main_form{
+        padding: 0rem 2rem;
+        .form_div{
+            padding-right: 0px;
+        }
     }
 }
 
 
 @media screen and (max-width: 575px) {
 
-    .contact_main_con{
-        padding-left: 0px;
+    .contact_container{
 
-        .inner_main_con{
-            padding: 0rem 0rem  ;
+        .contact_main_con{
+
+            // background-color: greenyellow;
+    
+            .inner_main_con{
+                padding: 0rem 1.5rem  ;
+            }
+           
         }
-       
     }
-
-
+    
     .inputs_div{
+        width: 100%;
          input{
             width: 100%;
             margin-bottom: 1rem;

@@ -42,7 +42,11 @@
   background-color: #ffb400;
 }
 
-.form_div {
+.main_form {
+  padding: 0rem 4rem;
+}
+
+.main_form .form_div {
   padding-right: 2.5rem;
 }
 
@@ -65,17 +69,20 @@
 }
 
 @media screen and (max-width: 991px) {
-  .form_div {
+  .main_form {
+    padding: 0rem 2rem;
+  }
+  .main_form .form_div {
     padding-right: 0px;
   }
 }
 
 @media screen and (max-width: 575px) {
-  .contact_main_con {
-    padding-left: 0px;
+  .contact_container .contact_main_con .inner_main_con {
+    padding: 0rem 1.5rem;
   }
-  .contact_main_con .inner_main_con {
-    padding: 0rem 0rem;
+  .inputs_div {
+    width: 100%;
   }
   .inputs_div input {
     width: 100%;

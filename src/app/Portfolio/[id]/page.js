@@ -6,6 +6,7 @@ import styles from "../../CSS/Portfolio.module.css"
 import Link from "next/link";
 import { BsGithub } from "react-icons/bs";
 import { IoMdArrowBack } from "react-icons/io";
+import Loading from "@/app/loading";
 
 const Works =  ({params}) => {
 
@@ -35,7 +36,6 @@ const Works =  ({params}) => {
     }
 
     HandelData()
-    // console.log(data.github_link)
     if(window !== "undefined"){
       setShowComponent(true);
     }
@@ -45,6 +45,8 @@ const Works =  ({params}) => {
 
   return (
     showComponent &&
+
+    data._id ?
     <>
     <title>works</title>
         <div className={` ${styles.projects_container}`}>
@@ -90,6 +92,8 @@ const Works =  ({params}) => {
 
       </div>
     </>
+    :
+    <Loading />
   )
 }
 

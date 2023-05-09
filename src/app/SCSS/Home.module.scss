@@ -20,6 +20,7 @@
         padding: 2rem;
         background-color: transparent;
         // background-color: rgba(0, 0, 0, 0.5);
+        // background-color: cyan;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -243,20 +244,23 @@
     .main_nav{
         // width: 100%;
         // height: 100%;
-        // background-color: grey;
+        background-color: grey;
         display: flex;
         position: relative;
+        // background-color: aqua; 
     
         .overlay_navbar{
             width: 100vw;
             height: 100vh;
-            background-color: #252525;
-            position: absolute;
+            background-color: #252525; 
+            position: fixed;
             top: 0px;
-            left: 0px;
+            left: -100%;
             z-index: 100;
-            display: none;
+            display: flex; 
             color: #fff;
+            // animation: slideNavbar 5s linear;
+            transition: all 0.5s;
     
             .inner_overlay{
                 width: 100%;
@@ -272,7 +276,8 @@
                     justify-content: flex-end;
                     align-items: center;
                     padding: 3rem 3rem 0rem 0rem;
-                    
+
+                
                 }
                 ul{
                     width: 95%;
@@ -281,7 +286,7 @@
     
                     li{
                         list-style: none;
-                        font-size: 1.8rem;
+                        font-size: 1.5rem;
                         text-transform: uppercase;
                         font-weight: 600;
                         padding: 1rem 0rem;
@@ -310,12 +315,15 @@
                 }
             }
         }
+        .show_nav{
+            left: 0%;
+        }
     
     }
 
 
-    // Home page
 
+    // Home page
     .main_container{
         .left_side_container{
             display: none;
@@ -375,8 +383,10 @@
 
 }
 
+
 @media screen and (max-width: 575px) {
     .main_container{
+
         .upper_container{
             flex-direction: column;
             justify-content: center;
@@ -388,6 +398,8 @@
             .content_div{
                 width: 100%;
                 height: 50%;
+                padding: 0rem 1rem;
+                // background-color: greenyellow;
                 flex-direction: column;
                 
                 h1{
@@ -418,7 +430,6 @@
 
         }
     }
-
 
     // navbar
     .overlay_navbar{

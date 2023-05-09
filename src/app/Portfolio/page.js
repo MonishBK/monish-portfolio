@@ -20,8 +20,6 @@ const Portfolio =  () => {
               'User-Agent': '*'
             }
           });
-
-          console.log("inside the handelers")
     
           const data = await res.json();
           setData(data.data)

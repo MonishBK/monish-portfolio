@@ -27,7 +27,6 @@ const Contact = () => {
 
       const inputEvent = (e) => {
         let { name, value } = e.target;
-        console.log(name, value);
     
         setContactData({ ...contactData, [name]: value });
       };
@@ -180,7 +179,6 @@ const Contact = () => {
             }
             
             if(count === 4){
-                console.log(process.env.URL)
                 const res = await fetch("/api/contact", {
                   method: "POST",
                   headers: {
@@ -194,15 +192,10 @@ const Contact = () => {
                 const data = await res.json();
           
                 if (res.status === 422 || !data) {
-                  // window.alert("Invalid registration ");
                   toast.error("Something went wrong");
-                //   document.getElementById("load_img").style.display = "none"
-                //   console.log("Invalid registration ");
                 } else {
-                  // window.alert(" Registration Successfull !!..");
                   toast.success("Message sent Successfull !!..");
-                //   document.getElementById("load_img").style.display = "none"
-                //   console.log("  Successfull !!..");
+
                   setContactData({
                     name: "",
                     email: "",
@@ -247,12 +240,12 @@ const Contact = () => {
                    </p>
 
                    <div className="row my-3">
-                    <div className="col-sm-2">
+                    <div className="col-sm-2 col-md-1 col-lg-2 ">
                         <HiMailOpen className={ ` ${styles.contact_icons} text-center align-middle  `} style={{
                             color: "#ffb400"
                         }} />
                     </div>
-                    <div className="col-sm-10">
+                    <div className="col-sm-10 col-sm-11 col-lg-10">
                         <span className='text-uppercase' style={{
                             color:'grey'
                         }} >male me</span> <br />
@@ -261,12 +254,12 @@ const Contact = () => {
                    </div>
 
                    <div className="row my-3">
-                    <div className="col-sm-2">
+                    <div className="col-sm-2 col-md-1 col-lg-2 ">
                         <MdCall className={ ` ${styles.contact_icons} text-center align-middle  `} style={{
                             color: "#ffb400"
                         }} />
                     </div>
-                    <div className="col-sm-10">
+                    <div className="col-sm-10 col-md-11 col-lg-2">
                         <span className='text-uppercase' style={{
                             color:'grey'
                         }} >call me</span> <br />
@@ -307,7 +300,7 @@ const Contact = () => {
 
 
 
-                <div className="col-lg-8 col-sm-12 px-5">
+                <div className={`col-lg-8 col-sm-12  ${styles.main_form}`}>
                     <form method='POST' className={`${styles.form_div}`}>
                         <div className="row pb-4">
                             
@@ -374,7 +367,7 @@ const Contact = () => {
                         name='message'
                         value={contactData.message}
                         onChange={inputEvent}
-                        class="form-control  py-2 px-3" 
+                        className="form-control  py-2 px-3" 
                         id="msg"
                         style={{
                             borderRadius:20,

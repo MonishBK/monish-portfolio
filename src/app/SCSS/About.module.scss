@@ -137,6 +137,30 @@
                     }
                 }
             }
+
+            .edu_exp_con{
+                width: 100%;
+                margin: auto;
+                // background-color: cyan;
+    
+                .edu_exp_inner_box{
+                    position: relative;
+                    border-left: 1px solid rgba(128, 128, 128, 0.3);
+    
+                    .edu_logo{
+                        position: absolute;
+                        width: 35px;
+                        height: 35px;
+                        background-color: #ffb400;
+                        top: 0;
+                        left: -15px;
+                        border-radius: 50%;
+                        display: grid;
+                        place-items: center;
+                    }
+                }
+    
+            }
         }
     }
 }

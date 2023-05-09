@@ -5,7 +5,6 @@ import styles from './CSS/Home.module.css'
 import { BsArrowRightShort } from "react-icons/bs";
 import Link from 'next/link';
 import Navbar from './Components/Navbar';
-import Head from 'next/head';
 import Script from 'next/script';
 
 export default function Home() {

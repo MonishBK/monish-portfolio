@@ -14,7 +14,7 @@
         display: flex;
         align-items: center;
         // justify-content: center;
-        height: 70vh;
+        height: 75vh;
         // background-color: aquamarine; 
         // overflow-x: auto;
         overflow-y: hidden;
@@ -182,16 +182,15 @@ position: relative;
 
     .project_description{
         width: 80%;
-        // background-color: pink;
         margin: 0rem auto;
         margin-top: 3rem;
 
         h4{
-            font-size: 25px;
+            font-size: 1.2rem;
             color: grey;
             text-transform: capitalize;
             span{
-                font-size: 25px;
+                font-size: 1.2rem;
                 color: #fff;
                 text-transform: uppercase;
             }
@@ -229,6 +228,19 @@ position: relative;
     }
   }
 
+  @media screen and (max-width: 768px) {
+    
+     // project page
+     .projects_container{
+        .video_responsive{
+            width: 90vw;
+            height: 40vh;
+            margin-top: 2rem;
+        }
+    }
+
+  }
+
 @media screen and (max-width:450px) {
 
     .portfolio_container{
@@ -254,9 +266,32 @@ position: relative;
 
     // project page
     .projects_container{
-    
+        // background-color: pink;
+        // padding: 0rem;
+
         .video_responsive{
-            height: 50vh;
+            width: 95vw;
+            height: 30vh;
+            margin-top: 1rem;
+        }
+        .project_description{
+            width: 90%;
+            // background-color: pink;
+            
+    
+            h4{
+                font-size: 1rem;
+
+                span{
+                    font-size: 1rem;
+
+                }
+            }
+            p{
+                font-size: 15px;
+                padding-left: 10px;
+                color: #fff;
+            }
         }
     }
 
