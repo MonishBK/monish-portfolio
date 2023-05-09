@@ -3,6 +3,7 @@ import './CSS/global.css'
 import 'bootstrap/dist/css/bootstrap.css';
 import { Inter } from 'next/font/google'
 import Script from 'next/script';
+import { Analytics } from '@vercel/analytics/react';
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
        <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></Script>
       </head>
       <body className={inter.className}>{children}</body>
+      <Analytics />
     </html>
   )
 }
