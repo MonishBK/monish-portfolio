@@ -21,6 +21,10 @@ const projects = new Schema({
         type:String,
         required: true
     },
+    pic_name:{
+        type:String,
+        required: true
+    }
 });
 
 const Project = models.Project || model("Project",projects);

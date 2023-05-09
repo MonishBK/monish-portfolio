@@ -66,7 +66,9 @@ const Page = () => {
                             <div className={`${styles.inner_info}`}>Nationality : <span>Indian</span></div>
                         </div>
                         <div className={`col-sm-6 ${styles.r_info}`}>
-                            <div className={`${styles.inner_info}`}>email : <span>monishbk17@gmail.com</span></div>
+                            <div className={`${styles.inner_info}`}>email : <span style={{
+                                textTransform:"none"
+                            }} >monishbk17@gmail.com</span></div>
                         </div>
                     </div>
 

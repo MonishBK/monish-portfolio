@@ -8,7 +8,7 @@ import Image from 'next/image';
 
 const PortfolioCard = ({data}) => {
 
-  const {title,language,description,_id} = data;
+  const {title,language,description,_id,pic_name} = data;
 
   const [showComponent, setShowComponent] = useState(false);
 
@@ -26,7 +26,7 @@ const PortfolioCard = ({data}) => {
                   <div className={`${styles.img}`}>
                     {/* <img src="/images/project.png"/> */}
                     <Image
-                      src="/images/project.png"
+                      src={`/images/${pic_name}.jpg`}
                       width={350}
                       height={200}
                       alt="Picture of the author"

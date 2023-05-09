@@ -7,11 +7,11 @@ export async function POST(req, res) {
 
         const body = await req.json();
         await dbConnect();
-
+        console.log(body);
         await Project.create(body);
 
         return NextResponse.json({
-            message:"Project added successfully!"
+            message:"Project added successfully!",
         }, {
             status: 200
         })

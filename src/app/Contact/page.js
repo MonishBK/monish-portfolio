@@ -248,7 +248,7 @@ const Contact = () => {
                     <div className="col-sm-10 col-sm-11 col-lg-10">
                         <span className='text-uppercase' style={{
                             color:'grey'
-                        }} >male me</span> <br />
+                        }} >mail me</span> <br />
                         <span>monishbk17@gmai.com</span>
                     </div>
                    </div>
@@ -259,7 +259,7 @@ const Contact = () => {
                             color: "#ffb400"
                         }} />
                     </div>
-                    <div className="col-sm-10 col-md-11 col-lg-2">
+                    <div className="col-sm-10 col-md-11 col-lg-10">
                         <span className='text-uppercase' style={{
                             color:'grey'
                         }} >call me</span> <br />

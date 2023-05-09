@@ -6,6 +6,7 @@ import { BsArrowRightShort } from "react-icons/bs";
 import Link from 'next/link';
 import Navbar from './Components/Navbar';
 import Script from 'next/script';
+import Typewriter from "typewriter-effect";
 
 export default function Home() {
 
@@ -31,7 +32,17 @@ export default function Home() {
               <div className={`${styles.pro_image}  `}></div>
               <div className={`${styles.content_div} `}>
                 <h1><span>I&apos;M MONISH B K.</span> </h1>
-                <h1>web developer</h1>
+                <h1>
+                  <Typewriter
+                    options={{
+                      strings: ['web developer', 'Software developer'],
+                      autoStart: true,
+                      loop: true,
+                    }}
+
+                    />
+  
+                  </h1>
                 <p className='py-3' >
                 I&apos;m a Indian based full-stack developer focused on crafting clean & user‑friendly experiences, I am passionate about building excellent software that improves the lives of those around me.
                   </p>
