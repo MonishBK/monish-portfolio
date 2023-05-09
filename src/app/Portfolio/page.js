@@ -25,17 +25,17 @@ const Portfolio =  () => {
           setData(data.data)
     }
 
-    HandelGET()
+    // HandelGET()
 
     useEffect(() => {
       if(window !== "undefined"){
         setShowComponent(true);
       }
-      // HandelGET()
       
     }, []);
-
+    
     useEffect(() =>{
+      HandelGET()
       if(window.screen.width > 450){
         let item = document.getElementById("horizontal_scroll");
         if(item){
