@@ -25,13 +25,13 @@ const Portfolio =  () => {
           setData(data.data)
     }
 
-    // HandelGET()
+    HandelGET()
 
     useEffect(() => {
       if(window !== "undefined"){
         setShowComponent(true);
       }
-      HandelGET()
+      // HandelGET()
       
     }, []);
 
