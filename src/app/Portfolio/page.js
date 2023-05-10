@@ -6,12 +6,12 @@ import Navbar from "../Components/Navbar";
 import Headers from "../Components/Headers";
 import styles from "../CSS/Portfolio.module.css"
 
-const Portfolio =  () => {
+const Portfolio =  async () => {
 
   const [data, setData] = useState([]);
-    
+  const [showComponent, setShowComponent] = useState(false);
+
     const HandelGET = async () =>{
-        
         const res = await fetch("/api/getprojects",{
             method: 'GET',
             headers: {
@@ -19,23 +19,23 @@ const Portfolio =  () => {
               Accept: 'application/json',
               'User-Agent': '*'
             }
+          },{
+            cache: "no-store"
           });
     
           const data = await res.json();
           setData(data.data)
     }
 
-    // HandelGET()
-
     useEffect(() => {
       if(window !== "undefined"){
         setShowComponent(true);
       }
+      HandelGET()
       
     }, []);
     
     useEffect(() =>{
-      HandelGET()
       if(window.screen.width > 450){
         let item = document.getElementById("horizontal_scroll");
         if(item){
@@ -53,7 +53,7 @@ const Portfolio =  () => {
       }
     })
 
-    const [showComponent, setShowComponent] = useState(false);
+   
 
 
   return (

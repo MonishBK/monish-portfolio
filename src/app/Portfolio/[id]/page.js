@@ -27,6 +27,8 @@ const Works =  ({params}) => {
             Accept: 'application/json',
             'User-Agent': '*'
           }
+        },{
+          cache: "no-store"
         });
     
         const data = await res.json();
