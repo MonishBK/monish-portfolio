@@ -1,0 +1,36 @@
+.contact_admin_main_con {
+  color: #fff;
+  background-color: #0a0a0a;
+}
+
+.contact_admin_main_con .contact_admin_headers {
+  background-color: #252525;
+  color: #ffb400;
+}
+
+.contact_admin_main_con .message_data_con {
+  height: 85vh;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.contact_admin_main_con .message_data_con .contact_admin_data {
+  background-color: #252525;
+}
+
+.contact_admin_main_con .message_data_con .contact_admin_data .action_del_btn {
+  cursor: pointer;
+}
+
+.contact_admin_main_con .message_data_con .contact_admin_data .action_del_btn:hover {
+  color: #fc4242;
+}
+
+.contact_admin_main_con .message_data_con .contact_admin_data .action_link_btn {
+  cursor: pointer;
+}
+
+.contact_admin_main_con .message_data_con .contact_admin_data .action_link_btn:hover {
+  color: #4646ff;
+}
+/*# sourceMappingURL=ContactAdmin.module.css.map */

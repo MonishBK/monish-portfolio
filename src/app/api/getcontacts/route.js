@@ -1,16 +1,15 @@
 
 import dbConnect from "@/utils/dbconnect";
-import Project from "@/models/projects";
+import ContactMe from "@/models/contact";
 import {NextResponse} from "next/server";
 
-export async function GET(req,{params}) {
+
+export async function GET() {
     try {
 
-        const _id = params.id;
         await dbConnect();
-
-        let data = await Project.findById({_id})
-
+        let data = await ContactMe.find()
+ 
         return NextResponse.json({
             data
         }, {

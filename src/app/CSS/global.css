@@ -2,6 +2,12 @@ body {
   color: #fff;
 }
 
+.main_body {
+  background-color: #0a0a0a;
+  padding: 0;
+  margin: 0;
+}
+
 /* Heading Styles */
 .heading_con {
   /* height: 100%; */
@@ -140,7 +146,6 @@ body {
   .heading_con {
     padding-top: 0px;
     margin-bottom: 2rem;
-    background-color: greenyellow;
   }
   .heading_con .heading_behind {
     display: none;

@@ -1,0 +1,43 @@
+.contact_admin_main_con{
+    // width: 100%;
+    // height: 100vh;
+    color: #fff;
+    background-color: rgb(10, 10, 10);
+
+    .contact_admin_headers{
+        background-color: #252525;
+        color: #ffb400;
+    }
+
+    .message_data_con{
+
+        // width: 100%;
+        height: 85vh;
+        // height: 25vh;
+        // display: flex;
+        // background-color: greenyellow;
+        overflow: hidden;
+        overflow-y: scroll;
+
+        .contact_admin_data{
+            background-color: #252525;
+  
+            .action_del_btn{
+                cursor: pointer;
+                &:hover{
+                    color: rgb(252, 66, 66);
+                }
+
+            }
+
+            .action_link_btn{
+                cursor: pointer;
+                &:hover{
+                    color: rgb(70, 70, 255);
+                }
+            }
+        }
+    }
+
+
+} 

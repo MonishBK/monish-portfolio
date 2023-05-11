@@ -1,6 +1,12 @@
 body{
     color: #fff;
-    // background-color: aquamarine;
+    // background-color: aquamarine; 
+}
+
+.main_body{
+    background-color: rgb(10, 10, 10);
+    padding: 0;
+    margin: 0;
 }
 
 /* Heading Styles */
@@ -96,7 +102,7 @@ body{
         // background-color: transparent;
     }
 }
-
+ 
 
 // Loading CSS
 .main_loading{
@@ -134,7 +140,7 @@ body{
         animation-delay: 0;
       }
     }
-
+ 
  
 @keyframes lds-facebook {
     0% {
@@ -152,7 +158,7 @@ body{
     .heading_con{
         padding-top: 0px;
         margin-bottom: 2rem;
-        background-color: greenyellow;
+        // background-color: greenyellow;
 
         .heading_behind{
             display: none;

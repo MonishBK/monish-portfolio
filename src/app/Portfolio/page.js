@@ -6,12 +6,16 @@ import Navbar from "../Components/Navbar";
 import Headers from "../Components/Headers";
 import styles from "../CSS/Portfolio.module.css"
 
+
 const Portfolio =  async () => {
 
   const [data, setData] = useState([]);
   const [showComponent, setShowComponent] = useState(false);
 
     const HandelGET = async () =>{
+      if(process.env.NODE_ENV === 'production'){
+        await fetch(`/api/revalidate?path=/api/getprojects&secret=${process.env.NEXT_PUBLIC_My_SECRET_TOKEN}`)
+      }
         const res = await fetch("/api/getprojects",{
             method: 'GET',
             headers: {
@@ -19,12 +23,12 @@ const Portfolio =  async () => {
               Accept: 'application/json',
               'User-Agent': '*'
             }
-          },{
-            cache: "no-store"
           });
     
-          const data = await res.json();
-          setData(data.data)
+          const pro = await res.json();
+        // const res = await getAllProjects()
+        setData(pro.data)
+        // console.log("data=>",data)
     }
 
     useEffect(() => {
@@ -45,7 +49,7 @@ const Portfolio =  async () => {
               item.scrollLeft += 400;
             }
             else { 
-              item.scrollLeft -= 400
+              item.scrollLeft -= 400;
             }
             
           });
@@ -54,6 +58,7 @@ const Portfolio =  async () => {
     })
 
    
+    // const {data} = await getAllProjects();
 
 
   return (
@@ -61,6 +66,7 @@ const Portfolio =  async () => {
     <>
     <title>Portfolio</title>
          <Navbar/>
+
         <div className={` ${styles.portfolio_container} ${styles.loading_rel} `}>
             <Headers hb="works" hf="my portfolio" />
 
@@ -68,8 +74,8 @@ const Portfolio =  async () => {
 
             {
 
-              data.length > 0?
-              data.map((item)=>{
+              data?.length > 0?
+              data?.map((item)=>{
                 return (
                       <PortfolioCard key={item._id} data={item} />
                 )

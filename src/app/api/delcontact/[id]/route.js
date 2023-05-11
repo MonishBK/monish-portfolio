@@ -1,18 +1,19 @@
 
 import dbConnect from "@/utils/dbconnect";
-import Project from "@/models/projects";
+import ContactMe from "@/models/contact";
 import {NextResponse} from "next/server";
 
-export async function GET(req,{params}) {
+
+export async function DELETE(req,{params}) {
     try {
 
         const _id = params.id;
         await dbConnect();
 
-        let data = await Project.findById({_id})
+        await ContactMe.findByIdAndDelete({_id})
 
         return NextResponse.json({
-            data
+            message: "deleted Successfully!!.."
         }, {
             status: 200
         })

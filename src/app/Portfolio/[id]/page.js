@@ -13,12 +13,16 @@ const Works =  ({params}) => {
   const router = useRouter()
   const [showComponent, setShowComponent] = useState(false);
   const _id = params.id;
-  const [data, setData] = useState({});
+  const [data, setData] = useState({}); 
 
 
-  useEffect(() => { 
+  useEffect((_id) => {   
 
-    const HandelData = async () => {
+    const HandelData = async (_id) => {
+
+      if(process.env.NODE_ENV === 'production'){
+        await fetch(`/api/revalidate?path=/api/getprojects/${_id}&secret=${process.env.NEXT_PUBLIC_My_SECRET_TOKEN}`)
+      }
 
       const res = await fetch(`/api/getprojects/${_id}`,{
           method: 'GET',
@@ -27,17 +31,14 @@ const Works =  ({params}) => {
             Accept: 'application/json',
             'User-Agent': '*'
           }
-        },{
-          cache: "no-store"
         });
     
         const data = await res.json();
     
         setData(data.data)
-        
     }
 
-    HandelData()
+    HandelData(_id)
     if(window !== "undefined"){
       setShowComponent(true);
     }
@@ -60,7 +61,6 @@ const Works =  ({params}) => {
             // height="100"
             // src={`https://www.youtube.com/embed/E5fT6RFf66o`}
             src={data.youtube_link}
-            frameBorder="0"
             // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allow=" "
             allowFullScreen
