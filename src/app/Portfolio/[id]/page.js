@@ -16,14 +16,9 @@ const Works =  ({params}) => {
   const [data, setData] = useState({}); 
 
 
-  useEffect((_id) => {   
+  useEffect(() => {   
 
-    const HandelData = async (_id) => {
-
-      // if(process.env.NODE_ENV === 'production'){
-      //   await fetch(`/api/revalidate?path=/api/getprojects/${_id}&secret=${process.env.NEXT_PUBLIC_My_SECRET_TOKEN}`)
-      // }
-      await fetch(`https://monish-portfolio.vercel.app/api/revalidate?path=/api/getprojects/${_id}&secret=${process.env.NEXT_PUBLIC_My_SECRET_TOKEN}`)
+    const HandelData = async () => {
 
       const res = await fetch(`/api/getprojects/${_id}`,{
           method: 'GET',
@@ -39,7 +34,7 @@ const Works =  ({params}) => {
         setData(data.data)
     }
 
-    HandelData(_id)
+    HandelData()
     if(window !== "undefined"){
       setShowComponent(true);
     }
