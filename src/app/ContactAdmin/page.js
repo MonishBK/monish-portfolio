@@ -86,7 +86,7 @@ const ContactData = ({data,sl,HandelGET}) =>{
             // if(process.env.NODE_ENV === 'production'){
             //     await fetch(`/api/revalidate?path=/api/getcontacts&secret=${process.env.NEXT_PUBLIC_My_SECRET_TOKEN}`)
             // }
-            await fetch(`/api/revalidate?path=/api/getcontacts&secret=${process.env.NEXT_PUBLIC_My_SECRET_TOKEN}`)
+            await fetch(`https://monish-portfolio.vercel.app/api/revalidate?path=/api/getcontacts&secret=${process.env.NEXT_PUBLIC_My_SECRET_TOKEN}`)
             const res = await fetch(`/api/delcontact/${_id}`,{
                 method: 'DELETE',
                 headers: {
