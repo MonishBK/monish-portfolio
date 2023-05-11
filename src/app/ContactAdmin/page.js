@@ -83,9 +83,10 @@ const ContactData = ({data,sl,HandelGET}) =>{
     const HandlingDel = async (_id,name) =>{
         const ans = confirm("clicked the "+name)
         if(ans){
-            if(process.env.NODE_ENV === 'production'){
-                await fetch(`/api/revalidate?path=/api/getcontacts&secret=${process.env.NEXT_PUBLIC_My_SECRET_TOKEN}`)
-            }
+            // if(process.env.NODE_ENV === 'production'){
+            //     await fetch(`/api/revalidate?path=/api/getcontacts&secret=${process.env.NEXT_PUBLIC_My_SECRET_TOKEN}`)
+            // }
+            await fetch(`/api/revalidate?path=/api/getcontacts&secret=${process.env.NEXT_PUBLIC_My_SECRET_TOKEN}`)
             const res = await fetch(`/api/delcontact/${_id}`,{
                 method: 'DELETE',
                 headers: {

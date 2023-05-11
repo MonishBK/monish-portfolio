@@ -13,9 +13,10 @@ const Portfolio =  async () => {
   const [showComponent, setShowComponent] = useState(false);
 
     const HandelGET = async () =>{
-      if(process.env.NODE_ENV === 'production'){
-        await fetch(`/api/revalidate?path=/api/getprojects&secret=${process.env.NEXT_PUBLIC_My_SECRET_TOKEN}`)
-      }
+      // if(process.env.NODE_ENV === 'production'){
+      //   await fetch(`/api/revalidate?path=/api/getprojects&secret=${process.env.NEXT_PUBLIC_My_SECRET_TOKEN}`)
+      // }
+      await fetch(`/api/revalidate?path=/api/getprojects&secret=${process.env.NEXT_PUBLIC_My_SECRET_TOKEN}`)
         const res = await fetch("/api/getprojects",{
             method: 'GET',
             headers: {
