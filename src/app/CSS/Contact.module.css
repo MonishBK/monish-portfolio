@@ -1,7 +1,10 @@
 .contact_container {
-  width: 100%;
   background-color: #111111;
   color: #fff;
+}
+
+.contact_container .contact_main_con {
+  padding: 3rem 0rem;
 }
 
 .contact_container .contact_main_con .inner_main_con {
@@ -78,6 +81,12 @@
 }
 
 @media screen and (max-width: 575px) {
+  .contact_container {
+    margin-top: 4rem;
+  }
+  .contact_container .contact_main_con {
+    padding: 2rem 0rem;
+  }
   .contact_container .contact_main_con .inner_main_con {
     padding: 0rem 1.5rem;
   }

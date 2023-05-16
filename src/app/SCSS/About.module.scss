@@ -1,15 +1,19 @@
 .about_container{
-    width: 100vw;
+    // width: 100vw;
     // height: 100vh;
     background-color: rgb(17, 17, 17);
+    // background-color: red;
+    // margin-top: 4rem;
     
     .personal_info{
-        width: 100%;
-        padding: 0rem 2rem;
+        // width: 100%;
+        padding: 3rem 2rem;
+        // padding: 0px;
         // height: 65vh;
         background-color: rgb(17, 17, 17);
         // background-color: cyan; 
         color: #fff;
+        // margin-top: 4rem;
         // border-bottom: 1px solid grey;
 
         .infos{
@@ -99,9 +103,11 @@
     .about_container{
         // height: 100vh;
         // background-color: greenyellow;
+        padding: 0px;
+        margin-top: 4rem;
         .personal_info{
             // background-color: yellow; 
-            padding: 0rem 1rem;
+            padding: 2rem 1rem;
 
             .about_pro_pic{
                 width: 200px;

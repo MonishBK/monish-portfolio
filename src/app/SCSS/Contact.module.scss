@@ -1,11 +1,12 @@
 .contact_container{
-    width: 100%;
+    // width: 100%;
     // height: 100vh;
     background-color: rgb(17, 17, 17); 
     color: #fff;
 
     .contact_main_con{
         // background-color: aquamarine;
+        padding: 3rem 0rem;
         .inner_main_con{
             padding: 0rem 2.5rem  ; 
         }
@@ -92,9 +93,9 @@
 @media screen and (max-width: 575px) {
 
     .contact_container{
-
+        margin-top: 4rem;
         .contact_main_con{
-
+            padding: 2rem 0rem;
             // background-color: greenyellow;
     
             .inner_main_con{

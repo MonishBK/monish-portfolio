@@ -16,7 +16,7 @@ const Portfolio =  async () => {
       // if(process.env.NODE_ENV === 'production'){
       //   await fetch(`/api/revalidate?path=/api/getprojects&secret=${process.env.NEXT_PUBLIC_My_SECRET_TOKEN}`)
       // }
-        await fetch(`/api/revalidate?path=/api/getprojects&secret=${process.env.NEXT_PUBLIC_My_SECRET_TOKEN}`)
+        // await fetch(`/api/revalidate?path=/api/getprojects&secret=${process.env.NEXT_PUBLIC_My_SECRET_TOKEN}`)
       // await fetch(`https://monish-portfolio.vercel.app/api/revalidate?path=/api/getprojects&secret=${process.env.NEXT_PUBLIC_My_SECRET_TOKEN}`)
         const res = await fetch("/api/getprojects",{
             method: 'GET',
@@ -69,8 +69,8 @@ const Portfolio =  async () => {
     <title>Portfolio</title>
          <Navbar/>
 
+        <Headers hb="works" hf="my portfolio" />
         <div className={` ${styles.portfolio_container} ${styles.loading_rel} `}>
-            <Headers hb="works" hf="my portfolio" />
 
             <div className={styles.portfolio_works} id='horizontal_scroll' >
 
@@ -79,7 +79,7 @@ const Portfolio =  async () => {
               data?.length > 0?
               data?.map((item)=>{
                 return (
-                      <PortfolioCard key={item._id} data={item} />
+                    <PortfolioCard key={item._id} data={item} />
                 )
               })
                :

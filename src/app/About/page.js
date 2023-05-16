@@ -32,10 +32,10 @@ const Page = () => {
     <>
         <title>About</title>
         <Navbar/>
+         <Headers hb="resume" hf="about me" />
         <div className={` ${styles.about_container}`}>
-            <Headers hb="resume" hf="about me" />
 
-            <div className={`row  py-5 ${styles.personal_info}`}>
+            <div className={`row   ${styles.personal_info}`}>
                 <div className="col-lg-6 col-sm-12  ">
 
                     <h3 className='pb-4 text-uppercase'>personal infos</h3>

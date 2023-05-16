@@ -226,10 +226,10 @@ const Contact = () => {
         Contact
     </title>
         <Navbar/>
+        <Headers hb="Contact" hf="get in touch" />
         <div className={` ${styles.contact_container} ${styles.loading_rel} `}>
-            <Headers hb="Contact" hf="get in touch" />
 
-            <div className={` row ${styles.contact_main_con} py-5`}>
+            <div className={` row ${styles.contact_main_con} `}>
 
                 <div className={`col-lg-4 col-sm-12  ${styles.inner_main_con}  `}>
                    <h3 className='text-uppercase pb-2 fw-bold'>don&apos;t be shy!</h3>

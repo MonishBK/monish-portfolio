@@ -1,9 +1,15 @@
+html {
+  height: -webkit-fill-available;
+}
+
 body {
   color: #fff;
+  height: -webkit-fill-available;
+  background-color: #111111;
 }
 
 .main_body {
-  background-color: #0a0a0a;
+  background-color: #111111;
   padding: 0;
   margin: 0;
 }
@@ -14,6 +20,7 @@ body {
   position: relative;
   padding-top: 2.5rem;
   color: #fff;
+  background-color: #111111;
 }
 
 .heading_con .heading_behind {
@@ -146,6 +153,7 @@ body {
   .heading_con {
     padding-top: 0px;
     margin-bottom: 2rem;
+    margin-top: 0px;
   }
   .heading_con .heading_behind {
     display: none;
